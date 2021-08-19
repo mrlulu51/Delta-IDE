@@ -1,0 +1,12 @@
+fr/delta/ide/util/LangManager.java
+ fr.delta.ide.util.LangManager
+fr/delta/ide/util/Graphics.java
+ fr.delta.ide.util.Graphics
+ fr.delta.ide.util.Graphics$MenuItemFactory
+ fr.delta.ide.util.Graphics$StageFactory
+fr/delta/ide/main/Main.java
+ fr.delta.ide.main.Main
+fr/delta/ide/Delta.java
+ fr.delta.ide.Delta
+fr/delta/ide/overlay/MenuBar.java
+ fr.delta.ide.overlay.MenuBar
