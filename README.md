@@ -2,7 +2,7 @@
 A powerful IDE for Java, created in Java.
 
 ## Dependencies
-For the installation you need Git(https://git-scm.com/downloads) and Java 15(https://adoptopenjdk.net/) or later.
+For the installation you need Git (https://git-scm.com/downloads) and Java 15 (https://adoptopenjdk.net/) or later.
 
 ## Install
 Go to https://github.com/mrlulu51/Delta-IDE/releases.
