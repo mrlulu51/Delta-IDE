@@ -1,26 +1,25 @@
 package fr.delta.ide.util;
 
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public interface Graphics {
 
     static ImageView createImage(String path) throws IOException {
-        ImageView imageView;
-        BufferedImage imageReader = ImageIO.read(Graphics.class.getResource("/assets/textures/" + path + ".png"));
-        System.out.println(Graphics.class.getResource("/assets/textures/" + path + ".png").toString().substring(6));
-        Image image = new Image(String.valueOf(imageReader).substring(6), 20, 20, true, true, true);
-        imageView = new ImageView(image);
+        InputStream input = Graphics.class.getResourceAsStream("/assets/textures/" + path + ".png");
+        Image image = new Image(input);
+        ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(25);
+        imageView.setFitHeight(25);
 
         return imageView;
     }
@@ -33,6 +32,11 @@ public interface Graphics {
 
         static MenuItemFactory makeMenuItem(Object text) {
             return makeMenuItem(new MenuItem(text.toString()));
+        }
+
+        default MenuItemFactory setAction(EventHandler event) {
+            accept(item -> item.setOnAction(event));
+            return this;
         }
 
         default MenuItemFactory graphic(ImageView graphic) {
@@ -65,8 +69,8 @@ public interface Graphics {
             return this;
         }
 
-        default StageFactory setIcon(Image icon) {
-            accept(stage -> stage.getIcons().addAll(icon));
+        default StageFactory setIcon(ImageView icon) {
+            accept(stage -> stage.getIcons().addAll(icon.getImage()));
             return this;
         }
 

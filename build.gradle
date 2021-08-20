@@ -12,6 +12,10 @@ javafx {
     modules = [ 'javafx.controls' ]
 }
 
+manifest {
+    attributes('Main-Class': mainClassName, 'Implementation-Version': version)
+}
+
 repositories {
     mavenCentral()
 }
