@@ -42,7 +42,14 @@ public class MenuBar extends javafx.scene.control.MenuBar {
         createSaveButtonsInFileMenu(fileMenu);
         fileMenu.getItems().add(new SeparatorMenuItem());
 
-        final var optionsButton = makeMenuItem(getString("menu.file.preferences", getCurrent)).get();
+        final var optionsButton = makeMenuItem(getString("menu.file.preferences", getCurrent))
+                .setAction(new EventHandler() {
+                    @Override
+                    public void handle(Event event) {
+                        OptionWindow optionWindow = new OptionWindow();
+                    }
+                })
+                .get();
         final var exitButton = makeMenuItem(getString("menu.file.exit", getCurrent))
                 .setAction(new EventHandler() {
                     @Override

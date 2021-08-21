@@ -21,13 +21,9 @@ public class Delta extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        VBox root = new VBox();
-
         final var menuBar = new MenuBar();
         menuBar.displayButtonsInBar();
         createComponents(menuBar, stage);
-
-        mainWindow = new Scene(root);
         Stage window = makeStage(stage)
                 .title(getString("window.title", getCurrent))
                 .scene(this.mainWindow)
