@@ -9,13 +9,16 @@ fr/delta/ide/util/Graphics.java
  fr.delta.ide.util.Graphics
  fr.delta.ide.util.Graphics$MenuItemFactory
  fr.delta.ide.util.Graphics$StageFactory
+fr/delta/ide/main/Main.java
+ fr.delta.ide.main.Main
+fr/delta/ide/Delta.java
+ fr.delta.ide.Delta
+ fr.delta.ide.Delta$1
+fr/delta/ide/overlay/OptionWindow.java
+ fr.delta.ide.overlay.OptionWindow
 fr/delta/ide/overlay/MenuBar.java
  fr.delta.ide.overlay.MenuBar
  fr.delta.ide.overlay.MenuBar$1
  fr.delta.ide.overlay.MenuBar$2
  fr.delta.ide.overlay.MenuBar$3
-fr/delta/ide/Delta.java
- fr.delta.ide.Delta
- fr.delta.ide.Delta$1
-fr/delta/ide/main/Main.java
- fr.delta.ide.main.Main
+ fr.delta.ide.overlay.MenuBar$4
